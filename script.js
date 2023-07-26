@@ -23,7 +23,7 @@ async function fetchSearchWeatherInfo(city){
 }
 
 function renderWeatherInfo(weatherInfo) {
-    //firstly,we have to fetch element
+    //firstly,we have to fetch element from api
   
     const cityName = document.querySelector("[data-cityName]");
     const countryIcon = document.querySelector("[data-countryIcon]");

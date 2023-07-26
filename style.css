@@ -182,8 +182,9 @@ h2{
     height: 50px;
   }
   
+  /* parameter */
   .parameter p:first-of-type {
-    font-size: 1.15rem;
+    font-size: 1.20rem;
     font-weight: 600;
     text-transform: uppercase;
   }
