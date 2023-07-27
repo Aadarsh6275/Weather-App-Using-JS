@@ -1,71 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
-    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-    <div class="wrapper">
-        <!-- Heading  -->
-        <h1 class="heading1">Weather App</h1>
-        <!-- Search Weather  -->
-        <h2 class="heading2">Search Weather</h2>
-         
-        <!-- search container hai -->
-        <div>
-            <form class="form-container" data-searchForm>
-              <input 
-              type="text"
-               placeholder="Search for city"
-               data-searchInput
-              />
-              <button class="btn" type="submit">
-                <img src="./assets/search.png" width="20" height="20" loading="lazy"/>
-              </button>
-            </form>
-         </div>
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="wrapper cloud">
+      <!-- Heading  -->
+      <h1 class="heading1">Weather App</h1>
+      <!-- Search Weather  -->
+      <h2 class="heading2">Search Weather</h2>
 
-        <!-- loader  -->
-         <div class="loading-container" loading-Container><img src="./assets/loading.gif" width="150" height="150" alt="">
-        <p>Loading...</p></div>
+      <!-- search container hai -->
+      <form class="form-container" data-searchForm>
+        <input type="text" placeholder="Search for city" data-searchInput />
+        <button class="btn" type="submit">
+          <img
+            src="./assets/search.png"
+            width="20"
+            height="20"
+            loading="lazy"
+          />
+        </button>
+      </form>
+      <!-- loader  -->
+      <div class="loading-container" loading-Container>
+        <img src="./assets/loading.gif" width="150" height="150" alt="" />
+        <p>Loading...</p>
+      </div>
 
-         <!-- Weather-info -->
-         <div class="sub-container user-info-container" user-info-container>
-            <div class="name">
-                <p data-cityName></p>
-                <img  data-countryIcon/>
-            </div>
-            <!-- Weather Desc     -->
-               <p data-weatherDesc></p>
-                <p data-weatherFeel></p>
-                <img data-weatherIcon/>
-                <p data-temp></p>
-            <div class="parameter-container">
-               <!-- single div -->
-                <div class="parameter">
-                    <img src="./assets/wind.png" />
-                    <p>Windspeed</p>
-                    <p data-windspeed></p>
-                </div>
+      <!-- Weather-info -->
+      <div class="sub-container user-info-container" user-info-container>
+        <div class="name">
+          <p data-cityName></p>
+          <img data-countryIcon />
+        </div>
+        <!-- Weather Desc     -->
+        <p data-weatherDesc></p>
+        <p data-weatherFeel></p>
+        <img data-weatherIcon />
+        <p data-temp></p>
+        <div class="parameter-container">
+          <!-- single div -->
+          <div class="parameter">
+            <img src="./assets/wind.png" />
+            <p>Windspeed</p>
+            <p data-windspeed></p>
+          </div>
 
-                <div class="parameter">
-                    <img src="./assets/cloud.png"/>
-                    <p>Clouds</p>
-                    <p data-cloudiness></p>
-                </div>
+          <div class="parameter">
+            <img src="./assets/cloud.png" />
+            <p>Clouds</p>
+            <p data-cloudiness></p>
+          </div>
 
-                <div class="parameter">
-                    <img src="./assets/humidity.png" />
-                    <p>Humidity</p>
-                    <p data-humidity></p>
-                </div>
-            </div>
-         </div>
-         
+          <div class="parameter">
+            <img src="./assets/humidity.png" />
+            <p>Humidity</p>
+            <p data-humidity></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Error -->
+      <div class="error" data-error>
+        <img src="./assets/not-found.png" alt="" />
+        <p>Error:City Not Found</p>
+      </div>
     </div>
     <script src="./script.js"></script>
-</body>
+  </body>
 </html>
